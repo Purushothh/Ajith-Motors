@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="activation">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../ext/activation.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../ext/javax.mail-1.4.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../ext/mysql-connector.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../ext/jasperreports-6.7.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../ext/jasperreports-javaflow-6.7.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

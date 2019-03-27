@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Expenses">
+   <children>
+      <TextArea fx:id="description" layoutX="588.0" layoutY="324.0" prefHeight="82.0" prefWidth="254.0" />
+      <TextField fx:id="amount" layoutX="588.0" layoutY="424.0" prefHeight="25.0" prefWidth="83.0" />
+      <Button layoutX="587.0" layoutY="485.0" mnemonicParsing="false" onAction="#updateExpensesTable" text="Record Expense">
+         <font>
+            <Font size="17.0" />
+         </font></Button>
+      <DatePicker fx:id="date" layoutX="588.0" layoutY="276.0" />
+      <Label layoutX="347.0" layoutY="221.0" text="Expense Category">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <Label layoutX="347.0" layoutY="272.0" text="Expense Date">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <Label layoutX="347.0" layoutY="316.0" text="Description">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <Label layoutX="347.0" layoutY="416.0" text="Amount">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <fx:include source="CustomMenuBarAdmin.fxml" />
+      <ComboBox fx:id="expense_category" editable="true" layoutX="588.0" layoutY="225.0" prefHeight="25.0" prefWidth="254.0" />
+      <ImageView fitHeight="76.0" fitWidth="98.0" layoutX="36.0" layoutY="920.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/logo.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

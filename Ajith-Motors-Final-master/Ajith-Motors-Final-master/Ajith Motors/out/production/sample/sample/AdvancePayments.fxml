@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: linear-gradient(from 40% 25% to 40% 50%, #eaf1fc, #7ca2dd);" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AdvancePayments">
+    <children>
+        <fx:include source="CustomMenuBarAdmin.fxml" />
+        <TableView fx:id="tableAdvance" layoutX="211.0" layoutY="161.0" prefHeight="639.0" prefWidth="1502.0">
+            <columns>
+                <TableColumn fx:id="date" prefWidth="300.0" text="Date" />
+                <TableColumn fx:id="advance_no" prefWidth="300.0" text="Advance No." />
+            <TableColumn fx:id="customer_name" prefWidth="300.0" text="Customer Name" />
+            <TableColumn fx:id="vehicle_no" prefWidth="300.0" text="Vehicle Number" />
+                <TableColumn fx:id="total" prefWidth="300.0" text="Total (Rs.)" />
+            </columns>
+        </TableView>
+        <Label layoutX="872.0" layoutY="105.0" text="Advance Payments">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+      <ImageView fitHeight="76.0" fitWidth="98.0" layoutX="35.0" layoutY="909.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/logo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="133.0" layoutY="935.0" text="Ajith Motors (Pvt) Ltd.">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>

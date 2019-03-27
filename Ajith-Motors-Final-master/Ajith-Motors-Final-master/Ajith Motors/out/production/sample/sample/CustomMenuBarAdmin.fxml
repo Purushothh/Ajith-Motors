@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+
+<!--height 52-->
+
+<ButtonBar fx:id="menuBar" buttonMinWidth="305.0" prefHeight="60.0" prefWidth="1920.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.CustomMenuBarAdmin">
+   <buttons>
+      <Button fx:id="btnOverview" contentDisplay="TOP" minWidth="305.0" mnemonicParsing="false" onAction="#overviewPage" onMouseExited="#backToNormal" onMouseMoved="#changeOverview" prefWidth="305.0" style="-fx-background-color: transparent;" text="Overview">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnInventory" contentDisplay="TOP" layoutX="535.0" layoutY="18.0" minWidth="305.0" mnemonicParsing="false" onAction="#inventoryPage" onMouseExited="#backToNormal" onMouseMoved="#changeInventory" prefWidth="305.0" style="-fx-background-color: transparent;" text="Inventory">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+       <Button fx:id="btnExpenses" contentDisplay="TOP" minWidth="305.0" mnemonicParsing="false" onAction="#expensesPage" onMouseExited="#backToNormal" onMouseMoved="#changeExpenses" prefHeight="25.0" prefWidth="305.0" style="-fx-background-color: transparent;" text="Expenses">
+           <cursor>
+               <Cursor fx:constant="HAND" />
+           </cursor>
+       </Button>
+      <MenuButton fx:id="menuButton" alignment="CENTER" contentDisplay="TOP" minWidth="305.0" mnemonicParsing="false" onMouseExited="#backToNormal" onMouseMoved="#changeCashier" prefWidth="305.0" style="-fx-background-color: transparent; -fx-mark-color: transparent;" text="Cashier">
+        <items>
+          <MenuItem fx:id="sales" mnemonicParsing="false" onAction="#cashierPage" style="-fx-background-color: transparent;" text="Billing" />
+          <MenuItem fx:id="returns" mnemonicParsing="false" onAction="#returnsPage" style="-fx-background-color: transparent;" text="Returns" />
+            <MenuItem fx:id="drafts" mnemonicParsing="false" onAction="#draftsPage" text="Drafts" />
+            <MenuItem fx:id="advance" mnemonicParsing="false" onAction="#advancePage" text="Advance Payments" />
+        </items>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </MenuButton>
+      <Button fx:id="btnSettings" contentDisplay="TOP" layoutX="535.0" layoutY="18.0" minWidth="305.0" mnemonicParsing="false" onAction="#settingsPage" onMouseExited="#backToNormal" onMouseMoved="#changeSettings" prefWidth="305.0" style="-fx-background-color: transparent;" text="Settings">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnLogOut" contentDisplay="TOP" layoutX="535.0" layoutY="18.0" minWidth="305.0" mnemonicParsing="false" onAction="#logOut" onMouseExited="#backToNormal" onMouseMoved="#changeLogout" prefWidth="305.0" style="-fx-background-color: transparent;" text="Log Out">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </buttons>
+</ButtonBar>

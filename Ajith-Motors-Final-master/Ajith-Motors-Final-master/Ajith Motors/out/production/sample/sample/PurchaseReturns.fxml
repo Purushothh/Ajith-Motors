@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: linear-gradient(from 40% 25% to 40% 80%, #7ca2dd, #eaf1fc);" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.PurchaseReturns">
+   <children>
+      <Label layoutX="23.0" layoutY="19.0" text="Invoice No.">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtinvoiceno" layoutX="117.0" layoutY="16.0" />
+      <Button fx:id="btnSearch" layoutX="304.0" layoutY="12.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="31.0" style="-fx-background-color: transparent;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <TableView layoutX="24.0" layoutY="52.0" prefHeight="771.0" prefWidth="402.0">
+         <columns>
+            <TableColumn minWidth="200.0" prefWidth="75.0" text="Item Code" />
+            <TableColumn minWidth="200.0" prefWidth="175.0" text="Description" />
+         </columns>
+      </TableView>
+      <Label layoutX="625.0" layoutY="39.0" text="Returns">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="625.0" layoutY="439.0" text="Purchases">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="481.0" layoutY="583.0" mnemonicParsing="false" text="Add Item">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button layoutX="482.0" layoutY="627.0" mnemonicParsing="false" text="Bill Items">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Label layoutX="1593.0" layoutY="796.0" text="Total :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="481.0" layoutY="218.0" mnemonicParsing="false" text="Add Item">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <TableView layoutX="625.0" layoutY="71.0" prefHeight="308.0" prefWidth="1203.0">
+         <columns>
+            <TableColumn minWidth="240.0" prefWidth="75.0" text="Item Code" />
+            <TableColumn minWidth="240.0" prefWidth="229.0" text="Description" />
+            <TableColumn minWidth="240.0" text="Quantity" />
+            <TableColumn minWidth="240.0" prefWidth="112.0" text="Unit Price" />
+            <TableColumn minWidth="240.0" prefWidth="132.0" text="Net Price" />
+         </columns>
+      </TableView>
+      <TableView layoutX="625.0" layoutY="466.0" prefHeight="308.0" prefWidth="1203.0">
+         <columns>
+            <TableColumn minWidth="240.0" prefWidth="75.0" text="Item Code" />
+            <TableColumn minWidth="240.0" prefWidth="229.0" text="Description" />
+            <TableColumn minWidth="240.0" text="Quantity" />
+            <TableColumn minWidth="240.0" prefWidth="112.0" text="Unit Price" />
+            <TableColumn minWidth="240.0" prefWidth="132.0" text="Net Price" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

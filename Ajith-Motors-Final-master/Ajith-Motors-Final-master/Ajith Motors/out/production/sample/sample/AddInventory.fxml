@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: linear-gradient(from 40% 25% to 40% 50%, #eaf1fc, #7ca2dd);" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AddInventory">
+   <children>
+      <TextField fx:id="txtItemCode" layoutX="1429.0" layoutY="141.0" prefHeight="25.0" prefWidth="200.0" />
+      <TextField fx:id="txtUnitPrice" layoutX="1430.0" layoutY="342.0" prefHeight="25.0" prefWidth="200.0" />
+      <TextField fx:id="txtNetPrice" layoutX="1429.0" layoutY="440.0" prefHeight="25.0" prefWidth="200.0" />
+      <TextField fx:id="txtUnitFloorPrice" layoutX="1429.0" layoutY="491.0" prefHeight="25.0" prefWidth="200.0" />
+      <Button layoutX="1442.0" layoutY="545.0" mnemonicParsing="false" onAction="#addItemsToTable" style="-fx-background-color: #3fff6f;" text="Add Item to Invoice">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <HBox layoutX="46.0" layoutY="124.0" prefHeight="133.0" prefWidth="1102.0" style="-fx-border-color: lightgray;">
+         <children>
+            <AnchorPane cache="true" prefHeight="131.0" prefWidth="1106.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="24.0" text="Supplier Name :">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Label>
+                  <Label layoutX="14.0" layoutY="77.0" text="Purchase Invoice No. :">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Label>
+                  <Label layoutX="644.0" layoutY="23.0" text="Purchase Date :">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Label>
+                  <TextField fx:id="invoice_no" layoutX="207.0" layoutY="72.0" prefHeight="31.0" prefWidth="241.0" />
+                  <DatePicker fx:id="date" layoutX="783.0" layoutY="22.0" />
+                  <Label fx:id="lblAddSupplier" layoutX="909.0" layoutY="78.0" style="-fx-underline: true;" text="Add Supplier" textFill="#00a2e8">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="supplier_name" layoutX="207.0" layoutY="20.0" prefHeight="25.0" prefWidth="241.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+      <Label layoutX="62.0" layoutY="109.0" style="-fx-background-color: #f1f1f1;" text="Purchase Invoice Details">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="1277.0" layoutY="141.0" text="Item Code :">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label layoutX="1277.0" layoutY="189.0" prefHeight="30.0" prefWidth="117.0" text="Description :">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <TextField fx:id="txtDescription" layoutX="1429.0" layoutY="190.0" prefHeight="25.0" prefWidth="200.0" />
+      <Label layoutX="1277.0" layoutY="342.0" text="Unit Cost :">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label layoutX="1277.0" layoutY="244.0" text="Category :">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <ComboBox fx:id="category" layoutX="1429.0" layoutY="244.0" prefHeight="25.0" prefWidth="200.0" />
+      <Label layoutX="1277.0" layoutY="440.0" text="Unit Price :">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label layoutX="1277.0" layoutY="491.0" text="Floor Price :">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <TextField fx:id="txtQuantity" layoutX="1430.0" layoutY="390.0" prefHeight="25.0" prefWidth="200.0" />
+      <Label layoutX="1277.0" layoutY="390.0" text="Quantity :">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label layoutX="1277.0" layoutY="294.0" text="Units :">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <ComboBox fx:id="units" layoutX="1430.0" layoutY="294.0" prefHeight="25.0" prefWidth="200.0" />
+      <TableView fx:id="tablePurchases" layoutX="47.0" layoutY="327.0" prefHeight="325.0" prefWidth="1102.0">
+        <columns>
+          <TableColumn fx:id="item_code" prefWidth="150.0" text="Item Code" />
+          <TableColumn fx:id="description" prefWidth="200.0" text="Description" />
+            <TableColumn fx:id="unit_cost" prefWidth="150.0" text="Unit Cost" />
+            <TableColumn fx:id="quantity" prefWidth="150.0" text="Quantity" />
+            <TableColumn fx:id="unit_price" prefWidth="150.0" text="Unit Price" />
+            <TableColumn fx:id="floor_price" prefWidth="150.0" text="Floor Price" />
+            <TableColumn fx:id="net_price" prefWidth="150.0" text="Net Price" />
+        </columns>
+      </TableView>
+      <Label layoutX="644.0" layoutY="683.0" text="Total :">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTotal" layoutX="718.0" layoutY="683.0" prefHeight="30.0" prefWidth="241.0">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Button layoutX="829.0" layoutY="741.0" mnemonicParsing="false" onAction="#updatePurchasesTable" style="-fx-background-color: #3fff6f;" text="Record Purchase" />
+      <Label layoutX="1356.0" layoutY="79.0" text="Add Item">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="60.0" fitWidth="176.0" layoutX="1666.0" layoutY="863.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/codeJunction.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="1637.0" layoutY="853.0" text="Powered by">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="76.0" fitWidth="98.0" layoutX="37.0" layoutY="837.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/logo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="146.0" layoutY="863.0" text="Ajith Motors (Pvt) Ltd.">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

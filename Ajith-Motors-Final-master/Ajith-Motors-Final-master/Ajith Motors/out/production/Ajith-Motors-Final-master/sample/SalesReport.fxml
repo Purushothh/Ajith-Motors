@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: linear-gradient(from 40% 25% to 40% 50%, #eaf1fc, #7ca2dd);" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SalesReport">
+   <children>
+      <fx:include source="CustomMenuBarAdmin.fxml" />
+      <Label layoutX="851.0" layoutY="178.0" text="View Sales Report">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="from" layoutX="334.0" layoutY="271.0" />
+      <Label layoutX="271.0" layoutY="275.0" text="From">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="to" layoutX="1378.0" layoutY="270.0" />
+      <Label layoutX="1335.0" layoutY="274.0" text="To">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TableView fx:id="salesTable" layoutX="274.0" layoutY="339.0" prefHeight="524.0" prefWidth="1322.0">
+        <columns>
+          <TableColumn fx:id="date" prefWidth="330.0" text="Date" />
+          <TableColumn fx:id="invoice_no" prefWidth="330.0" text="Sales Invoice No." />
+            <TableColumn prefWidth="330.0" text="Customer" />
+            <TableColumn fx:id="amount" prefWidth="330.0" text="Amount (Rs.)" />
+        </columns>
+      </TableView>
+      <Label layoutX="1378.0" layoutY="872.0" text="Total :">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTotal" layoutX="1448.0" layoutY="872.0" prefHeight="30.0" prefWidth="148.0" text="">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="76.0" fitWidth="98.0" layoutX="36.0" layoutY="920.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/logo.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

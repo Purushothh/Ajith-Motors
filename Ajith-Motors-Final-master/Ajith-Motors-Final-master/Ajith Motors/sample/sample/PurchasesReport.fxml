@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: linear-gradient(from 40% 25% to 40% 50%, #eaf1fc, #7ca2dd);" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.PurchasesReport">
+   <children>
+      <fx:include source="CustomMenuBarAdmin.fxml" />
+      <Label layoutX="817.0" layoutY="100.0" text="View Purchases Report">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="from" layoutX="398.0" layoutY="176.0" />
+      <Label layoutX="335.0" layoutY="180.0" text="From">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="to" layoutX="1320.0" layoutY="176.0" />
+      <Label layoutX="1277.0" layoutY="180.0" text="To">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TableView fx:id="purchasesTable" layoutX="335.0" layoutY="244.0" prefHeight="571.0" prefWidth="1203.0">
+        <columns>
+          <TableColumn fx:id="date" prefWidth="300.0" text="Date" />
+          <TableColumn fx:id="invoice_no" prefWidth="300.0" text="Purchase Invoice No." />
+            <TableColumn fx:id="supplier_name" prefWidth="300.0" text="Supplier" />
+            <TableColumn fx:id="amount" prefWidth="300.0" text="Amount (Rs.)" />
+        </columns>
+      </TableView>
+      <Label layoutX="1306.0" layoutY="823.0" text="Total :">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+       <Label fx:id="lblTotal" layoutX="1398.0" layoutY="823.0" prefHeight="30.0" prefWidth="140.0" text="">
+           <font>
+               <Font name="System Bold" size="20.0" />
+           </font>
+       </Label>
+      <ImageView fitHeight="76.0" fitWidth="98.0" layoutX="36.0" layoutY="920.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/logo.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="1000.0" prefWidth="1920.0" style="-fx-background-color: linear-gradient(from 40% 25% to 40% 80%, #7ca2dd, #eaf1fc);" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SalesReturns">
+    <children>
+        <Label layoutX="223.0" layoutY="25.0" text="Invoice No.">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Label>
+        <TextField fx:id="txtinvoiceno" layoutX="313.0" layoutY="22.0" />
+        <Button fx:id="btnSearch" layoutX="500.0" layoutY="17.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="30.0" style="-fx-background-color: transparent;">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor></Button>
+        <Label layoutX="223.0" layoutY="232.0" text="Returns">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <Button fx:id="btnFinalizeReturn" layoutX="915.0" layoutY="689.0" mnemonicParsing="false" onAction="#cashierPage" text="Finalize Return">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+        <Label layoutX="1506.0" layoutY="635.0" text="Total :">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <Button fx:id="btnAddReturn" layoutX="1643.0" layoutY="302.0" mnemonicParsing="false" text="Add Item">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+        <TableView fx:id="returnTable" layoutX="223.0" layoutY="376.0" prefHeight="243.0" prefWidth="1502.0">
+            <columns>
+                <TableColumn fx:id="returnItemCode" minWidth="300.0" prefWidth="75.0" text="Item Code" />
+                <TableColumn fx:id="returnDescription" minWidth="300.0" prefWidth="229.0" text="Description" />
+                <TableColumn fx:id="returnQuantity" minWidth="300.0" onEditCommit="#editReturnQuantity" text="Quantity" />
+                <TableColumn fx:id="returnPrice" minWidth="300.0" onEditCommit="#editReturnPrice" prefWidth="112.0" text="Unit Price" />
+                <TableColumn fx:id="returnNetPrice" minWidth="300.0" prefWidth="132.0" text="Net Price" />
+            </columns>
+        </TableView>
+        <TableView fx:id="salesTable" layoutX="223.0" layoutY="59.0" prefHeight="227.0" prefWidth="1502.0">
+            <columns>
+                <TableColumn fx:id="salesItemCode" minWidth="300.0" prefWidth="75.0" text="Item Code" />
+                <TableColumn fx:id="salesDescription" minWidth="300.0" prefWidth="229.0" text="Description" />
+                <TableColumn fx:id="salesQuantity" minWidth="300.0" text="Quantity" />
+                <TableColumn fx:id="salesPrice" minWidth="300.0" prefWidth="112.0" text="Unit Price" />
+                <TableColumn fx:id="salesNetPrice" minWidth="300.0" prefWidth="132.0" text="Net Price" />
+            </columns>
+        </TableView>
+      <Label fx:id="lblTotal" layoutX="223.0" layoutY="333.0" prefHeight="27.0" prefWidth="147.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: linear-gradient(from 40% 25% to 40% 50%, #eaf1fc, #7ca2dd);" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ExpensesReport">
+    <children>
+        <fx:include source="CustomMenuBarAdmin.fxml" />
+        <Label layoutX="814.0" layoutY="169.0" text="View Expenses Report">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+        <DatePicker fx:id="from" layoutX="1052.0" layoutY="290.0" />
+        <Label layoutX="989.0" layoutY="294.0" text="From">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <DatePicker fx:id="to" layoutX="1343.0" layoutY="290.0" />
+        <Label layoutX="1300.0" layoutY="294.0" text="To">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <TableView fx:id="table_expenses" layoutX="359.0" layoutY="394.0" prefHeight="261.0" prefWidth="1202.0">
+            <columns>
+                <TableColumn fx:id="date" prefWidth="400.0" text="Date" />
+                <TableColumn fx:id="description" prefWidth="400.0" text="Description" />
+                <TableColumn fx:id="amount" prefWidth="400.0" text="Amount (Rs.)" />
+            </columns>
+        </TableView>
+      <Label layoutX="361.0" layoutY="296.0" text="Search By :">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="searchby" layoutX="448.0" layoutY="289.0" onHidden="#change" prefWidth="150.0" />
+      <TextField fx:id="searchbar" layoutX="620.0" layoutY="289.0" />
+      <Label fx:id="lblTotal" layoutX="1438.0" layoutY="683.0" prefHeight="27.0" prefWidth="123.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="1369.0" layoutY="683.0" text="Total :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="categoryList" layoutX="620.0" layoutY="289.0" onHidden="#change" prefHeight="31.0" prefWidth="187.0" promptText="Select Category" />
+      <ImageView fitHeight="76.0" fitWidth="98.0" layoutX="36.0" layoutY="920.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/logo.png" />
+         </image>
+      </ImageView>
+    </children>
+</AnchorPane>

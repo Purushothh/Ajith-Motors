@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Ajith Motors:jar">
+    <output-path>$PROJECT_DIR$/../out/artifacts/Ajith_Motors_jar</output-path>
+    <root id="archive" name="sample.jar">
+      <element id="module-output" name="sample" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../ext/activation.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../ext/javax.mail-1.4.4.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../ext/mysql-connector.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../ext/controlsfx-8.40.14/controlsfx-8.40.14.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../ext/controlsfx-8.40.14/controlsfx-samples-8.40.14.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../ext/controlsfx-8.40.14/fxsampler-1.0.10.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

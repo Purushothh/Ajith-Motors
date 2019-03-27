@@ -1,0 +1,19 @@
+<component name="libraryTable">
+  <library name="ext">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Ajith Motors/ext/javax.mail-1.4.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Ajith Motors/ext/activation.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Ajith Motors/ext/mysql-connector.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Ajith Motors/ext/jasperreports-6.7.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Ajith Motors/ext/jasperreports-javaflow-6.7.0.jar!/" />
+      <root url="file://$PROJECT_DIR$/Ajith Motors/ext/controlsfx-8.40.14" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/Ajith Motors/ext/controlsfx-8.40.14-sources.jar!/" />
+      <root url="file://$PROJECT_DIR$/Ajith Motors/ext/controlsfx-8.40.14" />
+    </SOURCES>
+    <jarDirectory url="file://$PROJECT_DIR$/Ajith Motors/ext/controlsfx-8.40.14" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/Ajith Motors/ext/controlsfx-8.40.14" recursive="false" type="SOURCES" />
+  </library>
+</component>

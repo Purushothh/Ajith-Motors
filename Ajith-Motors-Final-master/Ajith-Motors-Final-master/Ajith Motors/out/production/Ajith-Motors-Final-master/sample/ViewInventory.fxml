@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ViewInventory">
+   <children>
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: linear-gradient(from 40% 25% to 40% 50%, #eaf1fc, #7ca2dd);">
+         <children>
+            <TextField fx:id="searchbar" layoutX="1494.0" layoutY="78.0" promptText="Search by Name" />
+            <TableView fx:id="productTable" layoutX="179.0" layoutY="164.0" prefHeight="610.0" prefWidth="1502.0">
+               <columns>
+                  <TableColumn fx:id="icode" prefWidth="250.0" text="Item Code" />
+                  <TableColumn fx:id="desc" prefWidth="250.0" text="Description" />
+                  <TableColumn fx:id="qty" minWidth="0.0" prefWidth="250.0" text="Quantity" />
+                  <TableColumn fx:id="buyprice" minWidth="9.0" prefWidth="250.0" text="Cost" />
+                  <TableColumn fx:id="sellprice" prefWidth="250.0" text="Net Price" />
+                  <TableColumn fx:id="barprice" prefWidth="250.0" style="-fx-base: #f1f1f1; -fx-border-color: #f1f1f1; -fx-text-fill: black; -fx-border-width: 0.5px; -fx-background-color: yellow;" text="Floor Price" />
+               </columns>
+            </TableView>
+            <ComboBox fx:id="categoryType" layoutX="179.0" layoutY="78.0" prefHeight="25.0" prefWidth="197.0" />
+            <Label layoutX="1212.0" layoutY="794.0" text="Total Value of Inventory : Rs.">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="totalInventory" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="1494.0" layoutY="794.0" prefHeight="30.0" prefWidth="187.0">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="76.0" fitWidth="98.0" layoutX="31.0" layoutY="843.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/logo.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="129.0" layoutY="869.0" text="Ajith Motors (Pvt) Ltd.">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
